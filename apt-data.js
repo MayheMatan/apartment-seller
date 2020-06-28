@@ -1,8 +1,7 @@
 //You should not be touching this file. This is just your data. 
 //You can certainly explore this file to get to know your data.
 
-const apartments = [
-    {
+const apartments = [{
         img: "https://circaoldhouses.com/wp-content/uploads/2017/10/key-hole-house-1.jpg",
         address: "P. Sherman 42 Wallabe Way, Sydney",
         price: 2400,
@@ -12,7 +11,8 @@ const apartments = [
         contactDetails: {
             name: "Douglas",
             email: "doug@less.com"
-        }
+        },
+        features: ["AC", "Elevator", "Indoor Plumbing"]
     },
     {
         img: "https://i.pinimg.com/736x/17/f2/6e/17f26e8f188af5d3e377dacb2011889a--mediterranean-houses-mediterranean-style.jpg",
@@ -24,7 +24,8 @@ const apartments = [
         contactDetails: {
             name: "William",
             email: "will@i.am"
-        }
+        },
+        features: ["AC", "Elevator", "Indoor Plumbing"]
     },
     {
         img: "https://blenderartists.org/uploads/default/original/4X/2/f/9/2f9d2a683dd5eada8bf64a590aa20a01312509ca.jpg",
@@ -36,7 +37,8 @@ const apartments = [
         contactDetails: {
             name: "Rickay",
             email: "rrrrick@cucumber.com"
-        }
+        },
+        features: ["AC", "Indoor Plumbing"]
     },
     {
         img: "http://mat2.materialicious.com/images/space-house-803-o.jpg",
@@ -48,7 +50,8 @@ const apartments = [
         contactDetails: {
             name: "Charles",
             email: "charles.smith@coldmail.com"
-        }
+        },
+        features: ["AC"]
     },
     {
         img: "http://www.kucasnova.com/wp-content/uploads/2014/01/projekat-kuce-sa-potkrovljem-i-garazom-4-1.jpg",
@@ -60,6 +63,7 @@ const apartments = [
         contactDetails: {
             name: "Trevor",
             email: "t@noah.ark"
-        }
+        },
+        features: ["Indoor Plumbing"]
     }
 ]

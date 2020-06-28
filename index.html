@@ -4,10 +4,10 @@
 <head>
     <title>Selouse</title>
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css" />
+
 </head>
 
 <body>
@@ -38,7 +38,35 @@
     <!-- Your Code Here -->
     <!-- You should start doing handlebar stuff here -->
     <!-- Your Code Here -->
-
+    <script id="apartment-template" type="text/x-handlebars-template">
+        {{#each apartments}}
+        <div class="result">
+            <img src="{{this.img}}">
+            <p class="l-addr label">Address:</p>
+            <p class="address">{{this.address}}</p>
+            <p class="l-price label">Price:</p>
+            <p class="price">{{this.price}}$</p>
+            <p class="l-rooms label">Rooms:</p>
+            <p class="rooms">{{rooms}}</p>
+            {{#if this.parking}}
+            <p class="l-park label">Parking:</p>
+            <div class="parking">
+                <i class="fas fa-parking"></i>
+            </div> {{/if}} {{#if this.immediate}}
+            <p class="l-contact label">Contact:</p>
+            <p class="contact">{{this.contactDetails.name}}: {{this.contactDetails.email}}</p>
+            {{/if}}
+            <p class="l-features label">Features:</p>
+            <ul class="features">
+                {{#each this.features}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+        {{/each}} {{#unless apartments}}
+        <div class="no-match">There are no results matching your search</div>
+        {{/unless}}
+    </script>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
     <script src="apt-data.js"></script>
